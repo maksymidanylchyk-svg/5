@@ -1,0 +1,320 @@
+/* Загальні налаштування */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5e7c8;
+    color: #26352c;
+    line-height: 1.6;
+    padding-top: 70px;
+}
+
+/* Нові семантичні елементи */
+header,
+nav,
+main,
+section,
+article,
+aside,
+footer {
+    display: block;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 25px 20px;
+}
+
+.page-title {
+    color: #294936;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+/* Закріплена шапка */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #3f6b4f;
+    box-shadow: 0 2px 8px #0003;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fffaf0;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Меню */
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    color: #fffaf0;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+nav a:hover {
+    background: #294936;
+}
+
+/* Секції */
+.section {
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid #d8c9a9;
+    border-radius: 8px;
+    background: #fffaf0;
+    box-shadow: 0 3px 8px #0001;
+    scroll-margin-top: 90px;
+}
+
+.section:nth-of-type(even) {
+    background: #f0dfba;
+}
+
+h2 {
+    color: #294936;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #3f6b4f;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Довідковий блок aside */
+.info-note {
+    margin-top: 20px;
+    padding: 15px 18px;
+    background: #f5e7c8;
+    border-left: 5px solid #3f6b4f;
+    border-radius: 5px;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.info-note p {
+    margin-bottom: 0;
+}
+
+/* Головне зображення */
+.main-image {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Таблиця */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fffaf0;
+}
+
+th,
+td {
+    border: 1px solid #d8c9a9;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #3f6b4f;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: #f5e7c8;
+}
+
+/* Сітка карток з ударами */
+.hits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.hit {
+    position: relative;
+    padding: 25px 20px;
+    background: #fffaf0;
+    border: 1px solid #d8c9a9;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px #0001;
+}
+
+/* Бейдж */
+.badge {
+    position: absolute;
+    top: -12px;
+    right: 12px;
+    padding: 4px 10px;
+    background: #c72c5b;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #0003;
+}
+
+/* Галерея CSS Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Підвал */
+footer {
+    background: #294936;
+    color: #fffaf0;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+footer p {
+    margin: 0 0 5px;
+}
+
+/* Кнопка повернення нагору */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1001;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #c72c5b;
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px #0003;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.back-to-top:hover {
+    background: #294936;
+    transform: translateY(-3px);
+}
+
+/* Адаптація для телефонів */
+@media (max-width: 700px) {
+    body {
+        padding-top: 105px;
+    }
+
+    html {
+        scroll-padding-top: 115px;
+    }
+
+    .site-header {
+        height: 105px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    nav ul {
+        gap: 3px;
+    }
+
+    nav a {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 20px 12px;
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .hits,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 240px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
